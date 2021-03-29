@@ -1,13 +1,14 @@
-package com.warehouse.springboot.warehouse;
+package com.productos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WarehouseServiceApplication {
+public class ServicioProductoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WarehouseServiceApplication.class, args);
+		SpringApplication.run(ServicioProductoApplication.class, args);
+
 	}
 
 }

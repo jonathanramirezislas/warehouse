@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "spring.aplication.name",
+      "type": "java.lang.String",
+      "description": "Description for spring.aplication.name."
+  }
+] }
