@@ -4,34 +4,37 @@ import java.util.Date;
 
 public class Item {
 
-    private Long id;
-    private String nombre;
-    private Double precio;
-    private Date createAt;
+    private Producto producto;
+    private Integer cantidad;
 
-    public Long getId() {
-        return id;
+    public Item() {
     }
-    public void setId(Long id) {
-        this.id = id;
+
+    public Item(Producto producto, Integer cantidad) {
+        this.producto = producto;
+        this.cantidad = cantidad;
     }
-    public String getNombre() {
-        return nombre;
+
+    public Producto getProducto() {
+        return producto;
     }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
     }
-    public Double getPrecio() {
-        return precio;
+
+    public Integer getCantidad() {
+        return cantidad;
     }
-    public void setPrecio(Double precio) {
-        this.precio = precio;
+
+    public void setCantidad(Integer cantidad) {
+        this.cantidad = cantidad;
     }
-    public Date getCreateAt() {
-        return createAt;
+
+    //se podria implementar un variable Total pero JSON se genera con todos los  get
+    public Double getTotal() {
+        return producto.getPrecio() * cantidad.doubleValue();
     }
-    public void setCreateAt(Date createAt) {
-        this.createAt = createAt;
-    }
+
 
 }
