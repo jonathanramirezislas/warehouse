@@ -3,6 +3,8 @@ package com.zuulservice;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@EnableEurekaClient
+@EnableZuulProxy
 @SpringBootApplication
 public class ZuulServiceApplication {
 
