@@ -19,5 +19,7 @@ public interface IProductoClienteRest {
     @GetMapping("/ver/{id}")
     public Producto detalle(@PathVariable Long id);
 
+    @GetMapping("/testinghystrix")
+    public Producto testinghystrix();
 
 }
