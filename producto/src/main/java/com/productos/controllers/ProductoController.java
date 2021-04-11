@@ -45,12 +45,32 @@ public class ProductoController {
         producto.setPort(webServerAppCtxt.getWebServer().getPort());
         return producto;
     }
+
     @PostMapping("/crear")
     @ResponseStatus(HttpStatus.CREATED) //response status
     public Producto crear(@RequestBody Producto producto) {
         return productoService.save(producto);
 
     }
+
+    @PutMapping("/editar/{id}")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Producto editar(@RequestBody Producto producto, @PathVariable Long id) {
+        Producto productoDb = productoService.findById(id);
+
+        productoDb.setNombre(producto.getNombre());
+        productoDb.setPrecio(producto.getPrecio());
+
+        return productoService.save(productoDb);
+    }
+
+
+    @DeleteMapping("/eliminar/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void eliminar(@PathVariable Long id) {
+        productoService.deleteById(id);
+    }
+
 
 }
 
