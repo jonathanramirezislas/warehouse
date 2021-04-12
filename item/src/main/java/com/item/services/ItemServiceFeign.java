@@ -2,6 +2,7 @@ package com.item.services;
 
 import com.item.cliente.IProductoClienteRest;
 import com.item.models.Item;
+import com.item.models.Producto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +23,16 @@ public class ItemServiceFeign implements IItemService {
     @Override
     public Item findById(Long id, Integer cantidad) {
         return new Item(clienteFeign.detalle(id), cantidad);
+    }
+
+    @Override
+    public Producto update(Producto producto, Long id) {
+        return null;
+    }
+
+    @Override
+    public void delete(Long id) {
+
     }
 
 }
