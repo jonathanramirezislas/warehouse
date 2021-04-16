@@ -1,6 +1,6 @@
 package com.productos.services;
 
-import com.productos.entities.Producto;
+import com.commonsservice.entities.Producto;
 
 import java.util.List;
 

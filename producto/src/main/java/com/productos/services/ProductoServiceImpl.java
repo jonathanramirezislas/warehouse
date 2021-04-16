@@ -1,6 +1,6 @@
 package com.productos.services;
 
-import com.productos.entities.Producto;
+import com.commonsservice.entities.Producto;
 import com.productos.repositories.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

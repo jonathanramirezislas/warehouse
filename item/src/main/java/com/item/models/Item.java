@@ -1,5 +1,7 @@
 package com.item.models;
 
+import com.item.models.Producto;
+
 import java.util.Date;
 
 public class Item {

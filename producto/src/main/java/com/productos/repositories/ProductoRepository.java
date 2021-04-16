@@ -1,6 +1,6 @@
 package com.productos.repositories;
 
-import com.productos.entities.Producto;
+import com.commonsservice.entities.Producto;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
