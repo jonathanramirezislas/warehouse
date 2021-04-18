@@ -41,7 +41,7 @@ public class User implements Serializable {
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"),
-            uniqueConstraints = {@UniqueConstraint(columnNames = { "user_id", "role_id" }) }) //unique only one user can have only one role no more
+            uniqueConstraints = {@UniqueConstraint(columnNames = { "user_id", "role_id" }) })
     private List<Role> roles;
 
     public List<Role> getRoles() {
