@@ -7,10 +7,12 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-
-@RepositoryRestResource(path="user")// endpoint with data rest
+import org.springframework.data.rest.core.annotation.RestResource;
+                                    //Nota endpoint prefix search
+@RepositoryRestResource(path="user")// search/user/*↓ endpoint with data rest
 public interface UserRepository extends PagingAndSortingRepository<User, Long> {
 
+    @RestResource(path="buscar-username") //user/buscar-username enpoint
     public User findByUsername(@Param("username") String username);
 
                         //class                  //param 1, 2 ,...
